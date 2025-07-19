@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando Tailwind CSS no HTML5</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" />
+    <style>
+        html {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-800 text-white">
+    <header class="text-center mt-5">
+        <h1 class="text-4xl"><span class="text-blue-500">Tailwind CSS</span> (<span class="font-semibold">v4.1</span>)</h1>
+        <p class="text-2xl mt-2">Framework do CSS</p>
+    </header>
+    <main>
+        <section class="text-center mt-5">
+            <h2 class="text-2xl">Sobre o <strong class="text-blue-500">Framework</strong></h2>
+            <p class="text-base mt-1.5">
+                <strong class="text-blue-500">Tailwind CSS</strong> é uma Framework do CSS muito poderosa do que o <strong class="text-violet-700">Bootstrap</strong>. Ela usa classes ou seja você irá usa que nem um CSS Inline.
+            </p>
+        </section>
+        <section class="m-auto w-6xl mt-6">
+            <h2 class="text-3xl">Vantagens</h2>
+
+            <h3 class="text-xl mt-4">&#x1F527; 1. Produtividade elevada</h3>
+            <p class="mb-4">
+                O Tailwind permite escrever estilos diretamente nos elementos HTML usando classes utilitárias. Isso reduz o tempo gasto em criar e manter arquivos CSS separados.
+            </p>
+            
+            <h3 class="text-xl mt-4">&#x1F3AF; 2. Customização fácil com o <strong class="text-blue-500">tailwind.config.js</strong></h3>
+            <p class="mb-4">
+                Você pode personalizar cores, espaçamentos, fontes, breakpoints e muito mais de forma centralizada.
+            </p>
+
+            <h3 class="text-xl mt-4">&#x1F4E6; 3. Design consistente e escalável</h3>
+            <p class="mb-4">
+                As utilitárias garantem que você use sempre os mesmos valores de margem, padding, cores, etc., tornando o design mais uniforme e fácil de manter.
+            </p>
+
+            <h3 class="text-xl mt-4">&#x1F4C3; 4. Menos CSS para manter</h3>
+            <p class="mb-4">
+                Você evita criar CSS customizado para cada componente. Isso ajuda a prevenir problemas como estilos conflitantes ou código não utilizado.
+            </p>
+
+            <h3 class="text-xl mt-4">&#x1F680; 5. Ótima performance com o JIT (Just-in-Time)</h3>
+            <p class="mb-4">
+                A compilação <strong>JIT do Tailwind</strong> gera apenas as classes realmente utilizadas, o que reduz bastante o tamanho do CSS final.
+            </p>
+
+            <h3 class="text-xl mt-4">&#x1F4F1; 6. Responsivo de forma intuitiva</h3>
+            <p class="mb-4">
+                Tailwind facilita a criação de layouts responsivos com prefixos como <strong>sm:, md:, lg:</strong>, etc.
+            </p>
+
+            <h3 class="text-xl mt-4">&#x1F3A8; 7. Sem dependência de temas prontos</h3>
+            <p class="mb-4">
+                Ao contrário de frameworks como Bootstrap, Tailwind não impõe estilos de componentes pré-prontos. Ele oferece total liberdade de design com baixo acoplamento.
+            </p>
+        </section>
+        <section class="m-auto w-6xl mt-6 mb-6">
+            <h2 class="text-3xl">Desvantagens</h2>
+
+            <h3 class="text-xl mt-4">&#x1F50D; 1. Markup poluído e verboso</h3>
+            <p class="text-base mb-4">
+                Como os estilos são aplicados diretamente nas classes HTML, os elementos podem ficar com muitas classes, o que dificulta a leitura e manutenção.
+            </p>
+
+            <h3 class="text-xl mt-4">&#x1F4DA; 2. Curva de aprendizado inicial</h3>
+            <p class="text-base mb-4">
+                Embora não seja complicado, leva um tempo para se acostumar com a nomenclatura das classes utilitárias, especialmente para quem vem de CSS tradicional.
+            </p>
+
+            <h3 class="text-xl mt-4">&#x1F6AB; 3. Dependência de build tools</h3>
+            <p class="text-base mb-4">
+                Tailwind precisa de ferramentas de build (como PostCSS, Vite, Webpack) para funcionar corretamente, especialmente com a compilação JIT. Isso pode ser um obstáculo em projetos pequenos ou iniciantes.
+            </p>
+
+            <h3 class="text-xl mt-4">&#x1F9F1; 4. Falta de componentes prontos</h3>
+            <p class="text-base mb-4">
+                Diferente do Bootstrap, Tailwind não vem com componentes UI prontos (botões, modais, navbars). Você precisa construí-los do zero (ou usar bibliotecas externas como Tailwind UI — que é paga).
+            </p>
+
+            <h3 class="text-xl mt-4">&#x1F9E0; 5. Abstração menor do design</h3>
+            <p class="text-base mb-4">
+                Tailwind dá muito controle ao desenvolvedor, o que pode ser ruim se a equipe não seguir um design system bem definido. Isso pode gerar inconsistências se cada dev usar variações diferentes de espaçamento, cor, etc.
+            </p>
+
+            <h3 class="text-xl mt-4">&#x1F4E4; 6. Classes não usadas podem ser removidas erroneamente</h3>
+            <p class="text-base mb-4">
+                Durante o processo de purge (remoção de classes não utilizadas), é fácil acidentalmente remover classes que são construídas dinamicamente (por exemplo, com <strong>className</strong> no React). Isso exige cuidado extra.
+            </p>
+
+            <h3 class="text-xl mt-4">&#x1F4B0; 7. Tailwind UI é paga</h3>
+            <p class="text-base mb-4">
+                Embora o Tailwind CSS seja gratuito, <strong>sua biblioteca de componentes oficiais (Tailwind UI) <span class="underline">é paga</span></strong>. Isso pode ser uma limitação para equipes com orçamento restrito.
+            </p>
+        </section>
+    </main>
+    <footer class="text-center">
+        <p class="text-xl mb-2">Feito por <span class="font-semibold">Arthur Ferreira Dev</span></p>
+        <p class="text-3xl"><a href="https://github.com/arthurferreira-dev"><span class="text-white hover:text-slate-500 duration-450"><i class="ri-github-line"></i></span></a></p>
+    </footer>
+</body>
+</html>
